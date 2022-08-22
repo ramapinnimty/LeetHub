@@ -6,15 +6,15 @@ class Solution:
         if L == 1:
             return nums[0]
 
-        # Set the initial max. subarray to the first element
+        # Set the initial maximum subarray sum to the first element
         max_sum  = nums[0]
-        # Set the initial subarray sum to the first element
+        # Set the initial current sum to 0
         curr_sum = 0
         # Linearly iterate through contiguous subarrays
         for i in range(0, L):
             curr_sum += nums[i] # add the incoming element
             max_sum = max(max_sum, curr_sum) # update max. if necessary
-            # Reset the current max. sum if it is -ve
+            # Reset the current sum if it is -ve
             if curr_sum < 0:
                 curr_sum = 0
 
