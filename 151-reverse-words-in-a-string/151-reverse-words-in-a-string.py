@@ -1,4 +1,4 @@
-# Approach: 2-pointer; Time: O(n); Space: O(1)
+# Approach: 2-pointer; Time: O(n); Space: O(n)
 class Solution:
     def reverseWords(self, s: str) -> str:
         # String leading & trailing ' ' ; then split on ' '
