@@ -1,3 +1,4 @@
+# Time: O(max(|a|, |b|)); Space: O(max(|a|, |b|))
 class Solution:
     def addBinary(self, a: str, b: str) -> str:
         '''
