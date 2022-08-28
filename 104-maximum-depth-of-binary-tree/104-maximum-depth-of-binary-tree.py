@@ -4,7 +4,7 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
-# Time: O(n); Space: O(n)
+# Time: O(n); Space: O(n) when the tree is skewed
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         # Base case: Check if we have 0 nodes
