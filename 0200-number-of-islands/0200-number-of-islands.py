@@ -10,15 +10,16 @@ class Solution:
 
             # Chain the islands while the queue is not empty
             while q:
-                r, c = q.popleft() # unpack the row & col values
+                r_, c_ = q.popleft() # unpack the row & col values
                 directions = [[0, 1], [1, 0], [0, -1], [-1, 0]]
                 for dr, dc in directions:
-                    if (r+dr) in range(rows) \
-                        and (c+dc) in range(cols) \
-                        and grid[r+dr][c+dc] == '1' \
-                        and (r+dr, c+dc) not in visited:
-                        q.append((r+dr, c+dc))
-                        visited.add((r+dr, c+dc))
+                    r, c = r_+dr, c_+dc
+                    if r in range(rows) \
+                        and c in range(cols) \
+                        and grid[r][c] == '1' \
+                        and (r, c) not in visited:
+                        q.append((r, c))
+                        visited.add((r, c))
 
         rows, cols = len(grid), len(grid[0])
         visited = set()
