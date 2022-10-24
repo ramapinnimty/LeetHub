@@ -10,7 +10,7 @@ class Solution:
 
             # Chain the islands while the queue is not empty
             while q:
-                r_, c_ = q.popleft() # unpack the row & col values
+                r_, c_ = q.pop() # unpack the row & col values
                 directions = [[0, 1], [1, 0], [0, -1], [-1, 0]]
                 for dr, dc in directions:
                     r, c = r_+dr, c_+dc
